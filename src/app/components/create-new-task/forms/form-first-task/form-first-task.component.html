@@ -1,10 +1,13 @@
-<form class="example-form">
+<form [formGroup]="exampleForm" (ngSubmit)="onSubmit()">
   <mat-form-field class="example-full-width">
     <mat-label>Task Name</mat-label>
-    <input matInput placeholder="Task Name">
+    <input matInput placeholder="Task Name" formControlName="taskName">
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>Goal</mat-label>
-    <input matInput placeholder="GOal">
+    <input matInput placeholder="Goal" formControlName="goal">
   </mat-form-field>
+  <div>
+    <button mat-button matStepperNext [disabled]="exampleForm.invalid">Next</button>
+  </div>
 </form>

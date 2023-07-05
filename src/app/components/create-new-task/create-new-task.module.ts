@@ -7,13 +7,17 @@ import { FormFirstTaskComponent } from './forms/form-first-task/form-first-task.
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormTaskDetailsComponent } from './forms/form-task-details/form-task-details.component';
+import { ShowDataComponent } from './show-data/show-data.component';
 
 
 
 @NgModule({
   declarations: [
     CreateNewTaskComponent,
-    FormFirstTaskComponent
+    FormFirstTaskComponent,
+    FormTaskDetailsComponent,
+    ShowDataComponent
   ],
   exports: [
     CreateNewTaskComponent

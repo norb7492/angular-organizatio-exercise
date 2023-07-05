@@ -1,4 +1,4 @@
-export interface FirstTaskFormInterface {
+export interface IFirstTaskFormInterface {
   taskName: string;
   goal: string;
 }

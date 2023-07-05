@@ -1,0 +1,11 @@
+<div>
+  <div *ngIf="(firstTaskState$ | async) as firstTaskState;">
+    <h2>First Task State:</h2>
+    <p>{{ firstTaskState | json }}</p>
+  </div>
+
+  <div *ngIf="(taskDetailsState$ | async) as taskDetailsState;">
+    <h2>Task Details State:</h2>
+    <p>{{ taskDetailsState | json }}</p>
+  </div>
+</div>

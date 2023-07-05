@@ -1,0 +1,13 @@
+<form [formGroup]="taskDetailsForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Details</mat-label>
+    <textarea matInput placeholder="details" formControlName="details"></textarea>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Estimation</mat-label>
+    <input matInput placeholder="Estimation" formControlName="estimation">
+  </mat-form-field>
+  <div>
+    <button mat-button matStepperNext [disabled]="taskDetailsForm.invalid">Next</button>
+  </div>
+</form>

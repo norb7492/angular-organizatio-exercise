@@ -4,34 +4,35 @@ import { CreateNewTaskService } from '../../services/create-new-task.service';
 import { IFormsContractInterface } from '../forms-contract.interface';
 
 @Component({
-  selector: 'app-form-first-task',
-  templateUrl: './form-first-task.component.html',
-  styleUrls: ['./form-first-task.component.scss'],
+  selector: 'app-form-task-details',
+  templateUrl: './form-task-details.component.html',
+  styleUrls: ['./form-task-details.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FormFirstTaskComponent implements OnInit, IFormsContractInterface {
-  public firstTaskForm!: FormGroup;
+export class FormTaskDetailsComponent implements OnInit, IFormsContractInterface {
+  public taskDetailsForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder,
               private createNewTaskService: CreateNewTaskService) { }
+
   public ngOnInit(): void {
     this.initiateForm();
   }
 
   public initiateForm(): void {
-    this.firstTaskForm = this.formBuilder.group({
-      taskName: ['', Validators.required],
-      goal: ['', Validators.required]
+    this.taskDetailsForm = this.formBuilder.group({
+      details: ['', Validators.required],
+      estimation: ['', Validators.required]
     });
   }
 
   public onSubmit(): void {
-    if (this.firstTaskForm.valid) {
-      const { taskName, goal } = this.firstTaskForm.value;
+    if (this.taskDetailsForm.valid) {
+      const { details, estimation } = this.taskDetailsForm.value;
 
-      this.createNewTaskService.firstTaskStateValue = {
-        taskName,
-        goal
+      this.createNewTaskService.taskDetailsStateValue = {
+        details,
+        estimation
       };
     }
   }

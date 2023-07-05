@@ -3,9 +3,9 @@
     <app-form-first-task></app-form-first-task>
   </mat-step>
   <mat-step>
-    <h1>second step</h1>
+    <app-form-task-details></app-form-task-details>
   </mat-step>
   <mat-step>
-    <h1>third step</h1>
+    <app-show-data [currentStep]="stepper.selectedIndex"></app-show-data>
   </mat-step>
 </mat-stepper>

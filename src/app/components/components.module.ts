@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormTaskDetailsComponent } from './create-new-task/forms/form-task-details/form-task-details.component';
 import { ShowDataComponent } from './create-new-task/show-data/show-data.component';
 import { ExamplesComponent } from './examples/examples.component';
+import {SharedModule} from "../shared/shared.module";
 
 
 
@@ -32,6 +33,7 @@ import { ExamplesComponent } from './examples/examples.component';
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModule,
   ]
 })
 export class ComponentsModule { }

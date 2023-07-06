@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CreateNewTaskComponent } from './create-new-task.component';
+import { CreateNewTaskComponent } from './create-new-task/create-new-task.component';
 import { MatStepperModule } from "@angular/material/stepper";
 import { MatButtonModule } from '@angular/material/button';
-import { FormFirstTaskComponent } from './forms/form-first-task/form-first-task.component';
+import { FormFirstTaskComponent } from './create-new-task/forms/form-first-task/form-first-task.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FormTaskDetailsComponent } from './forms/form-task-details/form-task-details.component';
-import { ShowDataComponent } from './show-data/show-data.component';
+import { FormTaskDetailsComponent } from './create-new-task/forms/form-task-details/form-task-details.component';
+import { ShowDataComponent } from './create-new-task/show-data/show-data.component';
+import { ExamplesComponent } from './examples/examples.component';
 
 
 
@@ -17,7 +18,8 @@ import { ShowDataComponent } from './show-data/show-data.component';
     CreateNewTaskComponent,
     FormFirstTaskComponent,
     FormTaskDetailsComponent,
-    ShowDataComponent
+    ShowDataComponent,
+    ExamplesComponent
   ],
   exports: [
     CreateNewTaskComponent
@@ -32,4 +34,4 @@ import { ShowDataComponent } from './show-data/show-data.component';
     ReactiveFormsModule,
   ]
 })
-export class CreateNewTaskModule { }
+export class ComponentsModule { }

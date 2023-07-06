@@ -5,7 +5,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreateNewTaskModule } from "./components/create-new-task/create-new-task.module";
+import { ComponentsModule } from "./components/components.module";
+import { SharedModule } from "./shared/shared.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatInputModule } from '@angular/material/input';
@@ -20,7 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CreateNewTaskModule,
+    ComponentsModule,
+    SharedModule,
     BrowserAnimationsModule,
     CommonModule,
     ReactiveFormsModule,

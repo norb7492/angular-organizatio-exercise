@@ -5,17 +5,20 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
 import { TextLabelComponent } from './components/text-label/text-label.component';
+import { ComponentWithObjectComponent } from './components/component-with-object/component-with-object.component';
 
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    TextLabelComponent
+    TextLabelComponent,
+    ComponentWithObjectComponent
   ],
   exports: [
     NavbarComponent,
-    TextLabelComponent
+    TextLabelComponent,
+    ComponentWithObjectComponent
   ],
   imports: [
     CommonModule,

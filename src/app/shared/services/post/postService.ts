@@ -1,6 +1,6 @@
 import {Observable} from "rxjs";
 import {PostInterface} from "./post.interface";
 
-export abstract class PostServiceInterface {
+export abstract class PostService {
   abstract getPosts(): Observable<PostInterface[]>;
 }

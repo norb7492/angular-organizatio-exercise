@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import {PostServiceInterface} from "./post.service.interface";
+import {PostService} from "./postService";
 import {delay, Observable, of} from "rxjs";
 import {PostInterface} from "./post.interface";
 
 @Injectable({
   providedIn: 'root'
 })
-export class GraphqlPostService implements PostServiceInterface {
+export class GraphqlPostService implements PostService {
 
   constructor() { }
 

@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import {delay, Observable, of,} from 'rxjs';
 import { PostInterface } from './post.interface';
-import {PostServiceInterface} from "./post.service.interface";
+import {PostService} from "./postService";
 
 @Injectable({
   providedIn: 'root'
 })
-export class HttpPostService implements PostServiceInterface {
+export class HttpPostService implements PostService {
   constructor() { }
 
   public getPosts(): Observable<PostInterface[]> {

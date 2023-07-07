@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, Inject} from '@angular/core';
 import {IObjectDto} from "../../shared/components/component-with-object/object-dto.interface";
 import {HttpPostService} from "../../shared/services/post/http-post.service";
-import {PostServiceInterface} from "../../shared/services/post/post.service.interface";
+import {PostService} from "../../shared/services/post/postService";
 import {GraphqlPostService} from "../../shared/services/post/graphql-post.service";
 
 @Component({
@@ -9,13 +9,13 @@ import {GraphqlPostService} from "../../shared/services/post/graphql-post.servic
   templateUrl: './examples.component.html',
   styleUrls: ['./examples.component.scss'],
   providers: [{
-    provide: PostServiceInterface, useExisting: GraphqlPostService
+    provide: PostService, useExisting: GraphqlPostService
   }],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExamplesComponent {
 
-  constructor(private postService: PostServiceInterface) {
+  constructor(private postService: PostService) {
   }
 
   public personDto: IObjectDto = {

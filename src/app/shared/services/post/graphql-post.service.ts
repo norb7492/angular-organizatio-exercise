@@ -6,9 +6,11 @@ import {PostInterface} from "./post.interface";
 @Injectable({
   providedIn: 'root'
 })
-export class GraphqlPostService implements PostService {
+export class GraphqlPostService extends PostService {
 
-  constructor() { }
+  constructor() {
+    super();
+  }
 
   public getPosts(): Observable<PostInterface[]> {
     const posts = [

@@ -9,7 +9,7 @@ import {GraphqlPostService} from "../../shared/services/post/graphql-post.servic
   templateUrl: './examples.component.html',
   styleUrls: ['./examples.component.scss'],
   providers: [{
-    provide: PostService, useExisting: GraphqlPostService
+    provide: PostService, useExisting: HttpPostService
   }],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

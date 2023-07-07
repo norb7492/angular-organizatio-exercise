@@ -6,8 +6,10 @@ import {PostService} from "./postService";
 @Injectable({
   providedIn: 'root'
 })
-export class HttpPostService implements PostService {
-  constructor() { }
+export class HttpPostService extends PostService {
+  constructor() {
+    super();
+  }
 
   public getPosts(): Observable<PostInterface[]> {
     const posts = [
